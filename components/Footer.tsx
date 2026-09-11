@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Car, Phone, Mail, MapPin, Facebook, Instagram, Clock } from "lucide-react";
+import { Car, Phone, Mail, MapPin, Clock, Share2, MessageCircle } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 
 export default function Footer() {
@@ -27,13 +27,13 @@ export default function Footer() {
                 href="#"
                 className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/5 hover:bg-orange-500 transition-colors"
               >
-                <Facebook className="h-4 w-4" />
+                <Share2 className="h-4 w-4" />
               </a>
               <a
                 href="#"
                 className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/5 hover:bg-orange-500 transition-colors"
               >
-                <Instagram className="h-4 w-4" />
+                <MessageCircle className="h-4 w-4" />
               </a>
             </div>
           </div>
