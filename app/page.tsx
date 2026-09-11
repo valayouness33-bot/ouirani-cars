@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import HeroSection from "@/components/home/HeroSection";
 import StatsSection from "@/components/home/StatsSection";
 import FeaturedCars from "@/components/home/FeaturedCars";
@@ -5,6 +6,15 @@ import WhyUs from "@/components/home/WhyUs";
 import HowItWorks from "@/components/home/HowItWorks";
 import Testimonials from "@/components/home/Testimonials";
 import CtaBanner from "@/components/home/CtaBanner";
+
+export const metadata: Metadata = {
+  title: "Ouirani Cars — Location de Voitures à Agadir | Dès 200 MAD/Jour",
+  description:
+    "Louez votre voiture à Agadir avec Ouirani Cars. Dacia Logan, Sandero, Clio 5, Duster, Tucson, VW Touareg. Kilométrage illimité, assurance incluse, livraison à domicile. Réservation rapide 24h/24.",
+  alternates: {
+    canonical: "https://www.ouiranicars.com",
+  },
+};
 
 export default function HomePage() {
   return (
