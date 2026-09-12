@@ -29,7 +29,7 @@ export default function Testimonials() {
     <section className="py-20 bg-gray-900">
       <div className="container mx-auto px-4">
         <div className="text-center mb-14">
-          <p className="text-orange-400 font-semibold text-sm uppercase tracking-widest mb-2">
+          <p className="text-amber-400 font-semibold text-sm uppercase tracking-widest mb-2">
             Avis clients
           </p>
           <h2 className="text-4xl font-extrabold text-white">
@@ -45,7 +45,7 @@ export default function Testimonials() {
             >
               <div className="flex gap-1 mb-4">
                 {Array.from({ length: t.rating }).map((_, i) => (
-                  <Star key={i} className="h-4 w-4 fill-orange-400 text-orange-400" />
+                  <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />
                 ))}
               </div>
               <p className="text-gray-300 text-sm leading-relaxed flex-1 mb-6">"{t.text}"</p>

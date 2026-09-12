@@ -128,3 +128,9 @@
     @apply font-sans;
   }
 }
+
+/* Gold brand accent */
+:root {
+  --brand: #d4a017;
+  --brand-light: #f0bb2a;
+}

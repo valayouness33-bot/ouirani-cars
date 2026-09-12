@@ -8,11 +8,11 @@ export default function CtaBanner() {
       <div className="container mx-auto px-4">
         <div className="relative rounded-3xl overflow-hidden bg-gray-900 border border-white/5 p-12 md:p-16">
           {/* Orange glow */}
-          <div className="absolute -top-24 -right-24 h-64 w-64 rounded-full bg-orange-500/20 blur-3xl" />
-          <div className="absolute -bottom-24 -left-24 h-64 w-64 rounded-full bg-orange-500/10 blur-3xl" />
+          <div className="absolute -top-24 -right-24 h-64 w-64 rounded-full bg-amber-500/20 blur-3xl" />
+          <div className="absolute -bottom-24 -left-24 h-64 w-64 rounded-full bg-amber-500/10 blur-3xl" />
 
           <div className="relative z-10 max-w-2xl">
-            <p className="text-orange-400 font-semibold text-sm uppercase tracking-widest mb-4">
+            <p className="text-amber-400 font-semibold text-sm uppercase tracking-widest mb-4">
               Réservez maintenant
             </p>
             <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-4 leading-tight">
@@ -28,7 +28,7 @@ export default function CtaBanner() {
               <Button
                 asChild
                 size="lg"
-                className="bg-orange-500 hover:bg-orange-400 text-white font-bold text-base h-14 px-8 rounded-xl"
+                className="bg-amber-500 hover:bg-amber-400 text-white font-bold text-base h-14 px-8 rounded-xl"
               >
                 <Link href="/reservation">
                   Réserver maintenant
@@ -42,7 +42,7 @@ export default function CtaBanner() {
                 className="border-white/20 bg-white/5 text-white hover:bg-white/10 hover:text-white font-semibold text-base h-14 px-8 rounded-xl"
               >
               <a href="https://wa.me/212613612850" target="_blank" rel="noopener noreferrer">
-                <MessageCircle className="mr-2 h-5 w-5 text-green-400" />
+                <MessageCircle className="mr-2 h-5 w-5 text-emerald-400" />
                 WhatsApp
               </a>
               </Button>
@@ -53,7 +53,7 @@ export default function CtaBanner() {
                 className="text-gray-400 hover:text-white font-semibold text-base h-14 px-6"
               >
               <a href="tel:+212613612850">
-                <Phone className="mr-2 h-5 w-5 text-orange-400" />
+                <Phone className="mr-2 h-5 w-5 text-amber-400" />
                 Appeler
               </a>
               </Button>

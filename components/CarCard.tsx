@@ -7,7 +7,7 @@ import { Users, Gauge, Fuel, Calendar, CheckCircle2 } from "lucide-react";
 
 export default function CarCard({ car }: { car: Car }) {
   return (
-    <div className="group relative bg-gray-900 border border-white/5 rounded-2xl overflow-hidden hover:border-orange-500/40 hover:shadow-[0_0_40px_-10px_rgba(249,115,22,0.2)] transition-all duration-300 flex flex-col">
+    <div className="group relative bg-gray-900 border border-white/5 rounded-2xl overflow-hidden hover:border-amber-500/40 hover:shadow-[0_0_40px_-10px_rgba(249,115,22,0.2)] transition-all duration-300 flex flex-col">
       {/* Image */}
       <div className="relative h-52 overflow-hidden bg-white shrink-0">
         <img
@@ -21,7 +21,7 @@ export default function CarCard({ car }: { car: Car }) {
         {/* Top badges */}
         <div className="absolute top-3 left-3 flex flex-wrap gap-2">
           {car.badge && (
-            <span className="bg-orange-500 text-white text-xs font-bold px-2.5 py-1 rounded-full">
+            <span className="bg-amber-500 text-white text-xs font-bold px-2.5 py-1 rounded-full">
               {car.badge}
             </span>
           )}
@@ -33,9 +33,9 @@ export default function CarCard({ car }: { car: Car }) {
         {/* Availability */}
         <div className="absolute top-3 right-3">
           {car.available ? (
-            <div className="flex items-center gap-1.5 bg-green-500/15 border border-green-500/30 backdrop-blur rounded-full px-2.5 py-1">
-              <span className="h-1.5 w-1.5 rounded-full bg-green-400 animate-pulse" />
-              <span className="text-green-400 text-xs font-medium">Disponible</span>
+            <div className="flex items-center gap-1.5 bg-emerald-500/15 border border-emerald-500/30 backdrop-blur rounded-full px-2.5 py-1">
+              <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
+              <span className="text-emerald-400 text-xs font-medium">Disponible</span>
             </div>
           ) : (
             <div className="flex items-center gap-1.5 bg-red-500/15 border border-red-400/30 backdrop-blur rounded-full px-2.5 py-1">
@@ -50,7 +50,7 @@ export default function CarCard({ car }: { car: Car }) {
       <div className="p-5 flex flex-col flex-1">
         {/* Brand & Name */}
         <div className="mb-4">
-          <p className="text-orange-400 text-xs font-semibold uppercase tracking-widest mb-0.5">
+          <p className="text-amber-400 text-xs font-semibold uppercase tracking-widest mb-0.5">
             {car.brand}
           </p>
           <h3 className="text-white font-bold text-xl leading-tight">{car.name}</h3>
@@ -65,7 +65,7 @@ export default function CarCard({ car }: { car: Car }) {
             { icon: Calendar, label: `${car.year}` },
           ].map(({ icon: Icon, label }) => (
             <div key={label} className="flex items-center gap-2">
-              <Icon className="h-3.5 w-3.5 text-orange-400/80 shrink-0" />
+              <Icon className="h-3.5 w-3.5 text-amber-400/80 shrink-0" />
               <span className="text-gray-400 text-xs">{label}</span>
             </div>
           ))}
@@ -75,7 +75,7 @@ export default function CarCard({ car }: { car: Car }) {
         <div className="flex flex-wrap gap-1.5 mb-5">
           {car.features.slice(0, 3).map((f) => (
             <span key={f} className="flex items-center gap-1 text-xs bg-white/5 text-gray-400 rounded-lg px-2.5 py-1">
-              <CheckCircle2 className="h-3 w-3 text-orange-400/60 shrink-0" />
+              <CheckCircle2 className="h-3 w-3 text-amber-400/60 shrink-0" />
               {f}
             </span>
           ))}
@@ -100,7 +100,7 @@ export default function CarCard({ car }: { car: Car }) {
             <Button
               asChild
               disabled={!car.available}
-              className="bg-orange-500 hover:bg-orange-400 text-white font-semibold rounded-xl px-5 disabled:opacity-40"
+              className="bg-amber-500 hover:bg-amber-400 text-white font-semibold rounded-xl px-5 disabled:opacity-40"
             >
               <Link href={car.available ? `/reservation?car=${car.id}` : "#"}>
                 Réserver

@@ -26,7 +26,7 @@ export default function HowItWorks() {
     <section className="py-20 bg-gray-950">
       <div className="container mx-auto px-4">
         <div className="text-center mb-14">
-          <p className="text-orange-400 font-semibold text-sm uppercase tracking-widest mb-2">
+          <p className="text-amber-400 font-semibold text-sm uppercase tracking-widest mb-2">
             Simple & rapide
           </p>
           <h2 className="text-4xl font-extrabold text-white">
@@ -36,12 +36,12 @@ export default function HowItWorks() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
           {/* Connector line */}
-          <div className="hidden lg:block absolute top-10 left-[12.5%] right-[12.5%] h-px bg-gradient-to-r from-transparent via-orange-500/40 to-transparent" />
+          <div className="hidden lg:block absolute top-10 left-[12.5%] right-[12.5%] h-px bg-gradient-to-r from-transparent via-amber-500/40 to-transparent" />
 
           {steps.map((s) => (
             <div key={s.step} className="flex flex-col items-center text-center relative">
-              <div className="flex h-20 w-20 items-center justify-center rounded-2xl bg-orange-500/10 border border-orange-500/30 mb-6 z-10">
-                <span className="text-2xl font-black text-orange-400">{s.step}</span>
+              <div className="flex h-20 w-20 items-center justify-center rounded-2xl bg-amber-500/10 border border-amber-500/30 mb-6 z-10">
+                <span className="text-2xl font-black text-amber-400">{s.step}</span>
               </div>
               <h3 className="text-white font-semibold text-lg mb-3">{s.title}</h3>
               <p className="text-gray-400 text-sm leading-relaxed">{s.description}</p>

@@ -14,7 +14,7 @@ export default function StatsSection() {
             <div key={stat.label} className="py-10 px-6 text-center">
               <p className="text-5xl font-black text-white mb-1">
                 {stat.value}
-                <span className="text-orange-400 text-3xl">{stat.suffix}</span>
+                <span className="text-amber-400 text-3xl">{stat.suffix}</span>
               </p>
               <p className="text-gray-400 text-sm">{stat.label}</p>
             </div>

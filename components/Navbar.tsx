@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Phone, Menu, MessageCircle } from "lucide-react";
-import Logo from "@/components/Logo";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
@@ -24,11 +24,15 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-gray-900/95 backdrop-blur supports-[backdrop-filter]:bg-gray-900/80">
+    <header className="sticky top-0 z-50 w-full border-b border-amber-500/20 bg-black/95 backdrop-blur supports-[backdrop-filter]:bg-black/90">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         {/* Logo */}
-        <Link href="/" className="flex items-center">
-          <Logo className="h-11 w-auto" />
+        <Link href="/" className="flex items-center gap-3">
+          <Image src="/logo-gold.jpg" alt="Ouirani Cars" width={56} height={56} className="h-11 w-11 rounded-full object-cover" priority />
+          <div className="hidden sm:block leading-none">
+            <p className="text-white font-black text-lg">Ouirani</p>
+            <p className="text-amber-400 text-xs font-bold tracking-widest uppercase">Cars</p>
+          </div>
         </Link>
 
         {/* Desktop Nav */}
@@ -40,7 +44,7 @@ export default function Navbar() {
               className={cn(
                 "px-4 py-2 rounded-lg text-sm font-medium transition-colors",
                 pathname === link.href
-                  ? "text-orange-400 bg-orange-500/10"
+                  ? "text-amber-400 bg-amber-500/10"
                   : "text-gray-300 hover:text-white hover:bg-white/5"
               )}
             >
@@ -52,19 +56,19 @@ export default function Navbar() {
         {/* CTA */}
         <div className="hidden md:flex items-center gap-3">
           <a href={`tel:${PHONE}`} className="flex items-center gap-2 text-sm text-gray-300 hover:text-white transition-colors">
-            <Phone className="h-4 w-4 text-orange-400" />
+            <Phone className="h-4 w-4 text-amber-400" />
             {PHONE}
           </a>
           <a
             href={WHATSAPP}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white text-sm font-semibold px-3 py-2 rounded-lg transition-colors"
+            className="flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-semibold px-3 py-2 rounded-lg transition-colors"
           >
             <MessageCircle className="h-4 w-4" />
             WhatsApp
           </a>
-          <Button asChild size="sm" className="bg-orange-500 hover:bg-orange-400 text-white">
+          <Button asChild size="sm" className="bg-amber-500 hover:bg-amber-400 text-white">
             <Link href="/reservation">Réserver</Link>
           </Button>
         </div>
@@ -77,8 +81,12 @@ export default function Navbar() {
             </Button>
           </SheetTrigger>
           <SheetContent side="right" className="bg-gray-900 border-gray-700 w-72">
-            <div className="mb-8 mt-2">
-              <Logo className="h-10 w-auto" />
+            <div className="mb-8 mt-2 flex items-center gap-3">
+              <Image src="/logo-gold.jpg" alt="Ouirani Cars" width={48} height={48} className="h-12 w-12 rounded-full object-cover" />
+              <div>
+                <p className="text-white font-black text-lg leading-none">Ouirani</p>
+                <p className="text-amber-400 text-sm font-bold tracking-widest">CARS</p>
+              </div>
             </div>
             <nav className="flex flex-col gap-1">
               {navLinks.map((link) => (
@@ -89,7 +97,7 @@ export default function Navbar() {
                   className={cn(
                     "px-4 py-3 rounded-lg text-sm font-medium transition-colors",
                     pathname === link.href
-                      ? "text-orange-400 bg-orange-500/10"
+                      ? "text-amber-400 bg-amber-500/10"
                       : "text-gray-300 hover:text-white hover:bg-white/5"
                   )}
                 >
@@ -99,19 +107,19 @@ export default function Navbar() {
             </nav>
             <div className="mt-6 space-y-3">
               <a href={`tel:${PHONE}`} className="flex items-center gap-2 text-sm text-gray-300 px-4">
-                <Phone className="h-4 w-4 text-orange-400" />
+                <Phone className="h-4 w-4 text-amber-400" />
                 {PHONE}
               </a>
               <a
                 href={WHATSAPP}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-500 text-white text-sm font-semibold px-4 py-2.5 rounded-lg transition-colors w-full"
+                className="flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-semibold px-4 py-2.5 rounded-lg transition-colors w-full"
               >
                 <MessageCircle className="h-4 w-4" />
                 WhatsApp
               </a>
-              <Button asChild className="w-full bg-orange-500 hover:bg-orange-400 text-white">
+              <Button asChild className="w-full bg-amber-500 hover:bg-amber-400 text-white">
                 <Link href="/reservation" onClick={() => setOpen(false)}>
                   Réserver Maintenant
                 </Link>

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Logo from "@/components/Logo";
+import Image from "next/image";
 import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 
@@ -13,8 +13,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="space-y-4">
-            <Link href="/">
-              <Logo className="h-11 w-auto" />
+            <Link href="/" className="flex items-center gap-3">
+              <Image src="/logo-gold.jpg" alt="Ouirani Cars" width={52} height={52} className="h-12 w-12 rounded-full object-cover" />
+              <div className="leading-none">
+                <p className="text-white font-black text-xl">Ouirani</p>
+                <p className="text-amber-400 text-sm font-bold tracking-widest">CARS</p>
+              </div>
             </Link>
             <p className="text-sm leading-relaxed">
               La référence de la location de voitures à Agadir. Service premium, tarifs transparents en euros, disponible 24h/24.
@@ -24,7 +28,7 @@ export default function Footer() {
                 href={WHATSAPP}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 bg-green-600/20 border border-green-600/40 hover:bg-green-600 text-green-400 hover:text-white px-3 py-2 rounded-lg text-sm font-medium transition-colors"
+                className="flex items-center gap-2 bg-emerald-600/20 border border-emerald-600/40 hover:bg-emerald-600 text-emerald-400 hover:text-white px-3 py-2 rounded-lg text-sm font-medium transition-colors"
               >
                 <MessageCircle className="h-4 w-4" />
                 WhatsApp
@@ -43,7 +47,7 @@ export default function Footer() {
                 { href: "/contact", label: "Contact" },
               ].map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="hover:text-orange-400 transition-colors">
+                  <Link href={link.href} className="hover:text-amber-400 transition-colors">
                     {link.label}
                   </Link>
                 </li>
@@ -56,18 +60,18 @@ export default function Footer() {
             <h3 className="text-white font-semibold">Contact</h3>
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-3">
-                <MapPin className="h-4 w-4 text-orange-400 mt-0.5 shrink-0" />
+                <MapPin className="h-4 w-4 text-amber-400 mt-0.5 shrink-0" />
                 <span>Ouirani Cars, Faabi, Rue 115 Dakhla, Agadir 80000, Maroc</span>
               </li>
               <li className="flex items-center gap-3">
-                <Phone className="h-4 w-4 text-orange-400 shrink-0" />
-                <a href={`tel:${PHONE}`} className="hover:text-orange-400 transition-colors">
+                <Phone className="h-4 w-4 text-amber-400 shrink-0" />
+                <a href={`tel:${PHONE}`} className="hover:text-amber-400 transition-colors">
                   {PHONE}
                 </a>
               </li>
               <li className="flex items-center gap-3">
-                <Mail className="h-4 w-4 text-orange-400 shrink-0" />
-                <a href="mailto:ouiranicars@gmail.com" className="hover:text-orange-400 transition-colors">
+                <Mail className="h-4 w-4 text-amber-400 shrink-0" />
+                <a href="mailto:ouiranicars@gmail.com" className="hover:text-amber-400 transition-colors">
                   ouiranicars@gmail.com
                 </a>
               </li>
@@ -79,16 +83,16 @@ export default function Footer() {
             <h3 className="text-white font-semibold">Horaires</h3>
             <ul className="space-y-2 text-sm">
               <li className="flex items-center gap-2">
-                <Clock className="h-4 w-4 text-orange-400" />
+                <Clock className="h-4 w-4 text-amber-400" />
                 <span className="font-medium text-white">Lun – Sam</span>
               </li>
               <li className="pl-6">08h00 – 20h00</li>
               <li className="flex items-center gap-2 mt-2">
-                <Clock className="h-4 w-4 text-orange-400" />
+                <Clock className="h-4 w-4 text-amber-400" />
                 <span className="font-medium text-white">Dimanche</span>
               </li>
               <li className="pl-6">09h00 – 18h00</li>
-              <li className="mt-3 text-orange-400 font-medium">
+              <li className="mt-3 text-amber-400 font-medium">
                 Assistance 24h/24 par WhatsApp
               </li>
             </ul>

@@ -42,7 +42,7 @@ export default function VoituresPage() {
       <div className="relative bg-gray-900 border-b border-white/5 py-16 overflow-hidden">
         <div className="absolute inset-0 opacity-5 bg-[url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1600')] bg-cover bg-center" />
         <div className="container mx-auto px-4 relative z-10">
-          <p className="text-orange-400 font-semibold text-sm uppercase tracking-widest mb-2">
+          <p className="text-amber-400 font-semibold text-sm uppercase tracking-widest mb-2">
             Location voiture Agadir
           </p>
           <h1 className="text-5xl font-extrabold text-white mb-3">
@@ -58,7 +58,7 @@ export default function VoituresPage() {
         {/* Filters */}
         <div className="bg-gray-900 border border-white/5 rounded-2xl p-5 mb-8 sticky top-20 z-20 backdrop-blur">
           <div className="flex items-center gap-2 mb-4">
-            <SlidersHorizontal className="h-4 w-4 text-orange-400" />
+            <SlidersHorizontal className="h-4 w-4 text-amber-400" />
             <span className="text-white font-medium text-sm">Filtrer les voitures</span>
             <span className="ml-auto text-gray-500 text-sm">{filtered.length} résultat{filtered.length !== 1 ? "s" : ""}</span>
           </div>
@@ -69,7 +69,7 @@ export default function VoituresPage() {
                 placeholder="Rechercher un modèle..."
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                className="pl-9 bg-gray-800 border-white/10 text-white placeholder:text-gray-600 focus-visible:ring-orange-500/50"
+                className="pl-9 bg-gray-800 border-white/10 text-white placeholder:text-gray-600 focus-visible:ring-amber-500/50"
               />
             </div>
             <Select value={category} onValueChange={(v) => setCategory(v ?? "Tous")}>
@@ -123,7 +123,7 @@ export default function VoituresPage() {
             <p className="text-gray-600 text-sm mb-6">Essayez de modifier vos critères de recherche.</p>
             <Button
               variant="ghost"
-              className="text-orange-400 hover:text-orange-300"
+              className="text-amber-400 hover:text-amber-300"
               onClick={() => {
                 setSearch("");
                 setCategory("Tous");

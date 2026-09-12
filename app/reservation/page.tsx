@@ -82,8 +82,8 @@ function ReservationForm() {
   if (submitted) {
     return (
       <div className="text-center py-16 px-4">
-        <div className="flex h-20 w-20 items-center justify-center rounded-full bg-green-500/10 border border-green-500/30 mx-auto mb-6">
-          <CheckCircle2 className="h-10 w-10 text-green-400" />
+        <div className="flex h-20 w-20 items-center justify-center rounded-full bg-emerald-500/10 border border-emerald-500/30 mx-auto mb-6">
+          <CheckCircle2 className="h-10 w-10 text-emerald-400" />
         </div>
         <h2 className="text-3xl font-extrabold text-white mb-3">
           Réservation confirmée !
@@ -109,7 +109,7 @@ function ReservationForm() {
           </div>
           <div className="border-t border-white/10 mt-4 pt-4 flex justify-between">
             <span className="text-gray-400 font-medium">Total estimé</span>
-            <span className="text-orange-400 font-black text-lg">{formatPrice(total)}</span>
+            <span className="text-amber-400 font-black text-lg">{formatPrice(total)}</span>
           </div>
         </div>
         <Button
@@ -128,7 +128,7 @@ function ReservationForm() {
       {/* Car Selection */}
       <div className="bg-gray-800 border border-white/5 rounded-2xl p-6">
         <div className="flex items-center gap-2 mb-4">
-          <Car className="h-5 w-5 text-orange-400" />
+          <Car className="h-5 w-5 text-amber-400" />
           <h2 className="text-white font-semibold text-lg">Choisir un véhicule</h2>
         </div>
         <Select value={selectedCarId} onValueChange={(v) => setSelectedCarId(v ?? "")}>
@@ -147,7 +147,7 @@ function ReservationForm() {
         </Select>
 
         {selectedCar && (
-          <div className="mt-4 flex items-center gap-4 p-4 bg-orange-500/5 border border-orange-500/20 rounded-xl">
+          <div className="mt-4 flex items-center gap-4 p-4 bg-amber-500/5 border border-amber-500/20 rounded-xl">
             <img
               src={selectedCar.image}
               alt={selectedCar.name}
@@ -156,7 +156,7 @@ function ReservationForm() {
             <div>
               <p className="text-white font-semibold">{selectedCar.name}</p>
               <p className="text-gray-400 text-sm capitalize">{selectedCar.category} · {selectedCar.transmission}</p>
-              <p className="text-orange-400 font-bold mt-1">{formatPrice(selectedCar.pricePerDay)}/jour</p>
+              <p className="text-amber-400 font-bold mt-1">{formatPrice(selectedCar.pricePerDay)}/jour</p>
             </div>
           </div>
         )}
@@ -165,7 +165,7 @@ function ReservationForm() {
       {/* Dates */}
       <div className="bg-gray-800 border border-white/5 rounded-2xl p-6">
         <div className="flex items-center gap-2 mb-4">
-          <Calendar className="h-5 w-5 text-orange-400" />
+          <Calendar className="h-5 w-5 text-amber-400" />
           <h2 className="text-white font-semibold text-lg">Dates & Lieu</h2>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
@@ -220,7 +220,7 @@ function ReservationForm() {
       {/* Personal Info */}
       <div className="bg-gray-800 border border-white/5 rounded-2xl p-6">
         <div className="flex items-center gap-2 mb-4">
-          <User className="h-5 w-5 text-orange-400" />
+          <User className="h-5 w-5 text-amber-400" />
           <h2 className="text-white font-semibold text-lg">Vos informations</h2>
         </div>
         <div className="space-y-4">
@@ -270,7 +270,7 @@ function ReservationForm() {
 
       {/* Summary & Submit */}
       {selectedCar && days > 0 && (
-        <div className="bg-orange-500/5 border border-orange-500/20 rounded-2xl p-6">
+        <div className="bg-amber-500/5 border border-amber-500/20 rounded-2xl p-6">
           <h3 className="text-white font-semibold mb-4">Récapitulatif</h3>
           <div className="space-y-2 text-sm">
             <div className="flex justify-between">
@@ -283,7 +283,7 @@ function ReservationForm() {
             </div>
             <div className="border-t border-white/10 pt-3 flex justify-between">
               <span className="text-white font-semibold text-base">Total estimé</span>
-              <span className="text-orange-400 font-black text-xl">{formatPrice(total)}</span>
+              <span className="text-amber-400 font-black text-xl">{formatPrice(total)}</span>
             </div>
           </div>
         </div>
@@ -293,7 +293,7 @@ function ReservationForm() {
         type="submit"
         size="lg"
         disabled={loading}
-        className="w-full bg-orange-500 hover:bg-orange-400 text-white h-14 text-base font-semibold"
+        className="w-full bg-amber-500 hover:bg-amber-400 text-white h-14 text-base font-semibold"
       >
         {loading ? (
           <><Loader2 className="mr-2 h-5 w-5 animate-spin" /> Envoi en cours...</>
@@ -318,7 +318,7 @@ export default function ReservationPage() {
     <div className="min-h-screen bg-gray-950">
       <div className="bg-gray-900 border-b border-white/5 py-12">
         <div className="container mx-auto px-4">
-          <p className="text-orange-400 font-semibold text-sm uppercase tracking-widest mb-2">
+          <p className="text-amber-400 font-semibold text-sm uppercase tracking-widest mb-2">
             Réservation
           </p>
           <h1 className="text-4xl font-extrabold text-white mb-2">

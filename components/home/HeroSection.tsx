@@ -22,9 +22,9 @@ export default function HeroSection() {
       <div className="container mx-auto px-4 relative z-10 pt-20 pb-32">
         <div className="max-w-2xl">
           {/* Location */}
-          <div className="inline-flex items-center gap-2 bg-orange-500/15 border border-orange-500/30 rounded-full px-4 py-2 mb-8">
-            <MapPin className="h-3.5 w-3.5 text-orange-400" />
-            <span className="text-orange-300 text-sm font-medium">
+          <div className="inline-flex items-center gap-2 bg-amber-500/15 border border-amber-500/30 rounded-full px-4 py-2 mb-8">
+            <MapPin className="h-3.5 w-3.5 text-amber-400" />
+            <span className="text-amber-300 text-sm font-medium">
               Location de voitures · Agadir, Maroc
             </span>
           </div>
@@ -33,7 +33,7 @@ export default function HeroSection() {
           <h1 className="text-5xl md:text-7xl font-black text-white leading-[0.95] tracking-tight mb-6">
             Location
             <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-300">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-300">
               voiture Agadir
             </span>
             <br />
@@ -56,7 +56,7 @@ export default function HeroSection() {
               "Confirmation en moins de 30 min",
             ].map((item) => (
               <div key={item} className="flex items-center gap-2 text-sm text-gray-300">
-                <CheckCircle2 className="h-4 w-4 text-orange-400 shrink-0" />
+                <CheckCircle2 className="h-4 w-4 text-amber-400 shrink-0" />
                 {item}
               </div>
             ))}
@@ -73,7 +73,7 @@ export default function HeroSection() {
                 key={text}
                 className="flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-2 text-sm text-gray-300"
               >
-                <Icon className="h-3.5 w-3.5 text-orange-400" />
+                <Icon className="h-3.5 w-3.5 text-amber-400" />
                 {text}
               </div>
             ))}
@@ -84,7 +84,7 @@ export default function HeroSection() {
             <Button
               asChild
               size="lg"
-              className="bg-orange-500 hover:bg-orange-400 text-white font-bold text-base h-14 px-8 rounded-xl"
+              className="bg-amber-500 hover:bg-amber-400 text-white font-bold text-base h-14 px-8 rounded-xl"
             >
               <Link href="/voitures">
                 Voir toutes les voitures
@@ -98,7 +98,7 @@ export default function HeroSection() {
               className="border-white/20 bg-white/5 text-white hover:bg-white/10 hover:text-white font-semibold text-base h-14 px-8 rounded-xl"
             >
               <a href="tel:+212613612850">
-                <Phone className="mr-2 h-5 w-5 text-orange-400" />
+                <Phone className="mr-2 h-5 w-5 text-amber-400" />
                 +212 613 612 850
               </a>
             </Button>
