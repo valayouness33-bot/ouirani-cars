@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, Suspense } from "react";
+import { useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { cars } from "@/lib/cars";
 import { formatPrice } from "@/lib/utils";
@@ -13,7 +13,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { CheckCircle2, Car, Calendar, User, Phone, Mail, MapPin } from "lucide-react";
+import { CheckCircle2, Car, Calendar, User, Phone, Mail, Loader2 } from "lucide-react";
 
 function ReservationForm() {
   const searchParams = useSearchParams();
@@ -27,6 +27,8 @@ function ReservationForm() {
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
   const selectedCar = cars.find((c) => c.id === Number(selectedCarId));
 
@@ -43,9 +45,36 @@ function ReservationForm() {
 
   const total = selectedCar ? selectedCar.pricePerDay * days : 0;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    setError("");
+    try {
+      const res = await fetch("/api/reservation", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          carName: selectedCar?.name,
+          pickupDate,
+          returnDate,
+          pickupLocation,
+          name,
+          phone,
+          email,
+          days,
+          total,
+        }),
+      });
+      if (res.ok) {
+        setSubmitted(true);
+      } else {
+        setError("Erreur lors de l'envoi. Appelez-nous directement au +212613612850");
+      }
+    } catch {
+      setError("Erreur réseau. Appelez-nous au +212613612850");
+    } finally {
+      setLoading(false);
+    }
   };
 
   const today = new Date().toISOString().split("T")[0];
@@ -263,10 +292,20 @@ function ReservationForm() {
       <Button
         type="submit"
         size="lg"
+        disabled={loading}
         className="w-full bg-orange-500 hover:bg-orange-400 text-white h-14 text-base font-semibold"
       >
-        Confirmer la réservation
+        {loading ? (
+          <><Loader2 className="mr-2 h-5 w-5 animate-spin" /> Envoi en cours...</>
+        ) : (
+          "Confirmer la réservation"
+        )}
       </Button>
+      {error && (
+        <p className="text-center text-red-400 text-sm bg-red-500/10 border border-red-500/20 rounded-lg p-3">
+          {error}
+        </p>
+      )}
       <p className="text-center text-gray-500 text-xs">
         Votre réservation sera confirmée par téléphone sous 30 minutes. Aucun paiement immédiat requis.
       </p>
