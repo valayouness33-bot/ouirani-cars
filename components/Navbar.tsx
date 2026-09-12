@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Phone, Menu, MessageCircle } from "lucide-react";
-import Logo from "@/components/Logo";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
@@ -28,7 +28,7 @@ export default function Navbar() {
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         {/* Logo */}
         <Link href="/" className="flex items-center">
-          <Logo className="h-12 w-auto" />
+          <Image src="/logo-transparent.png" alt="Ouirani Cars" width={160} height={60} className="h-12 w-auto object-contain" priority />
         </Link>
 
         {/* Desktop Nav */}
@@ -78,7 +78,7 @@ export default function Navbar() {
           </SheetTrigger>
           <SheetContent side="right" className="bg-gray-900 border-gray-700 w-72">
             <div className="mb-8 mt-2">
-              <Logo className="h-10 w-auto" />
+              <Image src="/logo-transparent.png" alt="Ouirani Cars" width={140} height={52} className="h-10 w-auto object-contain" />
             </div>
             <nav className="flex flex-col gap-1">
               {navLinks.map((link) => (

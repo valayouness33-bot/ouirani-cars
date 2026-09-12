@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Logo from "@/components/Logo";
+import Image from "next/image";
 import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 
@@ -14,7 +14,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <Link href="/">
-              <Logo className="h-12 w-auto" />
+              <Image src="/logo-transparent.png" alt="Ouirani Cars" width={160} height={60} className="h-12 w-auto object-contain" />
             </Link>
             <p className="text-sm leading-relaxed">
               La référence de la location de voitures à Agadir. Service premium, tarifs transparents en euros, disponible 24h/24.
