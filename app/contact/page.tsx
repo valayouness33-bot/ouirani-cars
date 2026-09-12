@@ -45,7 +45,7 @@ export default function ContactPage() {
                   {
                     icon: MapPin,
                     title: "Adresse",
-                    lines: ["Boulevard Mohammed V", "Agadir 80000, Maroc"],
+                    lines: ["Faabi, Rue 115 Dakhla", "Agadir 80000, Maroc"],
                   },
                   {
                     icon: Phone,

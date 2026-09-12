@@ -28,7 +28,7 @@ export default function Navbar() {
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         {/* Logo */}
         <Link href="/" className="flex items-center">
-          <Image src="/logo.png" alt="Ouirani Cars" width={130} height={52} className="h-11 w-auto object-contain" priority />
+          <Image src="/logo.png" alt="Ouirani Cars" width={130} height={52} className="h-11 w-auto object-contain mix-blend-screen" priority />
         </Link>
 
         {/* Desktop Nav */}
@@ -78,7 +78,7 @@ export default function Navbar() {
           </SheetTrigger>
           <SheetContent side="right" className="bg-gray-900 border-gray-700 w-72">
             <div className="mb-8 mt-2">
-              <Image src="/logo.png" alt="Ouirani Cars" width={120} height={48} className="h-10 w-auto object-contain" />
+              <Image src="/logo.png" alt="Ouirani Cars" width={120} height={48} className="h-10 w-auto object-contain mix-blend-screen" />
             </div>
             <nav className="flex flex-col gap-1">
               {navLinks.map((link) => (
