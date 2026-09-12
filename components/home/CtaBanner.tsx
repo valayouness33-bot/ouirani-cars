@@ -41,10 +41,10 @@ export default function CtaBanner() {
                 variant="outline"
                 className="border-white/20 bg-white/5 text-white hover:bg-white/10 hover:text-white font-semibold text-base h-14 px-8 rounded-xl"
               >
-                <a href="https://wa.me/212600000000" target="_blank" rel="noopener noreferrer">
-                  <MessageCircle className="mr-2 h-5 w-5 text-green-400" />
-                  WhatsApp
-                </a>
+              <a href="https://wa.me/212613612850" target="_blank" rel="noopener noreferrer">
+                <MessageCircle className="mr-2 h-5 w-5 text-green-400" />
+                WhatsApp
+              </a>
               </Button>
               <Button
                 asChild
@@ -52,10 +52,10 @@ export default function CtaBanner() {
                 variant="ghost"
                 className="text-gray-400 hover:text-white font-semibold text-base h-14 px-6"
               >
-                <a href="tel:+212600000000">
-                  <Phone className="mr-2 h-5 w-5 text-orange-400" />
-                  Appeler
-                </a>
+              <a href="tel:+212613612850">
+                <Phone className="mr-2 h-5 w-5 text-orange-400" />
+                Appeler
+              </a>
               </Button>
             </div>
           </div>

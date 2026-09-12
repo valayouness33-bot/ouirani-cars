@@ -2,11 +2,15 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Phone, Menu, X, Car } from "lucide-react";
+import { Phone, Menu, MessageCircle } from "lucide-react";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
+
+const PHONE = "+212613612850";
+const WHATSAPP = "https://wa.me/212613612850";
 
 const navLinks = [
   { href: "/", label: "Accueil" },
@@ -23,14 +27,8 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-gray-900/95 backdrop-blur supports-[backdrop-filter]:bg-gray-900/80">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 group">
-          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-orange-500 group-hover:bg-orange-400 transition-colors">
-            <Car className="h-5 w-5 text-white" />
-          </div>
-          <div className="leading-none">
-            <p className="font-bold text-white text-lg">Ouirani</p>
-            <p className="text-orange-400 text-xs font-medium tracking-widest uppercase">Cars</p>
-          </div>
+        <Link href="/" className="flex items-center">
+          <Image src="/logo.png" alt="Ouirani Cars" width={130} height={52} className="h-11 w-auto object-contain" priority />
         </Link>
 
         {/* Desktop Nav */}
@@ -53,15 +51,21 @@ export default function Navbar() {
 
         {/* CTA */}
         <div className="hidden md:flex items-center gap-3">
-          <a
-            href="tel:+212600000000"
-            className="flex items-center gap-2 text-sm text-gray-300 hover:text-white transition-colors"
-          >
+          <a href={`tel:${PHONE}`} className="flex items-center gap-2 text-sm text-gray-300 hover:text-white transition-colors">
             <Phone className="h-4 w-4 text-orange-400" />
-            +212 6 00 00 00 00
+            {PHONE}
+          </a>
+          <a
+            href={WHATSAPP}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white text-sm font-semibold px-3 py-2 rounded-lg transition-colors"
+          >
+            <MessageCircle className="h-4 w-4" />
+            WhatsApp
           </a>
           <Button asChild size="sm" className="bg-orange-500 hover:bg-orange-400 text-white">
-            <Link href="/reservation">Réserver Maintenant</Link>
+            <Link href="/reservation">Réserver</Link>
           </Button>
         </div>
 
@@ -73,14 +77,8 @@ export default function Navbar() {
             </Button>
           </SheetTrigger>
           <SheetContent side="right" className="bg-gray-900 border-gray-700 w-72">
-            <div className="flex items-center gap-2 mb-8 mt-2">
-              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-orange-500">
-                <Car className="h-5 w-5 text-white" />
-              </div>
-              <div className="leading-none">
-                <p className="font-bold text-white text-lg">Ouirani</p>
-                <p className="text-orange-400 text-xs font-medium tracking-widest uppercase">Cars</p>
-              </div>
+            <div className="mb-8 mt-2">
+              <Image src="/logo.png" alt="Ouirani Cars" width={120} height={48} className="h-10 w-auto object-contain" />
             </div>
             <nav className="flex flex-col gap-1">
               {navLinks.map((link) => (
@@ -100,12 +98,18 @@ export default function Navbar() {
               ))}
             </nav>
             <div className="mt-6 space-y-3">
-              <a
-                href="tel:+212600000000"
-                className="flex items-center gap-2 text-sm text-gray-300 px-4"
-              >
+              <a href={`tel:${PHONE}`} className="flex items-center gap-2 text-sm text-gray-300 px-4">
                 <Phone className="h-4 w-4 text-orange-400" />
-                +212 6 00 00 00 00
+                {PHONE}
+              </a>
+              <a
+                href={WHATSAPP}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-500 text-white text-sm font-semibold px-4 py-2.5 rounded-lg transition-colors w-full"
+              >
+                <MessageCircle className="h-4 w-4" />
+                WhatsApp
               </a>
               <Button asChild className="w-full bg-orange-500 hover:bg-orange-400 text-white">
                 <Link href="/reservation" onClick={() => setOpen(false)}>

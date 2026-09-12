@@ -6,5 +6,5 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function formatPrice(price: number) {
-  return `${price.toLocaleString("fr-MA")} MAD`;
+  return `${price}€`;
 }

@@ -38,7 +38,7 @@ export default function HeroSection() {
             </span>
             <br />
             <span className="text-4xl md:text-5xl font-extrabold text-gray-300">
-              dès 200 MAD/jour
+              dès 29€/jour
             </span>
           </h1>
 
@@ -97,9 +97,9 @@ export default function HeroSection() {
               variant="outline"
               className="border-white/20 bg-white/5 text-white hover:bg-white/10 hover:text-white font-semibold text-base h-14 px-8 rounded-xl"
             >
-              <a href="tel:+212600000000">
+              <a href="tel:+212613612850">
                 <Phone className="mr-2 h-5 w-5 text-orange-400" />
-                Appeler maintenant
+                +212 613 612 850
               </a>
             </Button>
           </div>

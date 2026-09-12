@@ -1,6 +1,10 @@
 import Link from "next/link";
-import { Car, Phone, Mail, MapPin, Clock, Share2, MessageCircle } from "lucide-react";
+import Image from "next/image";
+import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
+
+const PHONE = "+212613612850";
+const WHATSAPP = "https://wa.me/212613612850";
 
 export default function Footer() {
   return (
@@ -9,31 +13,21 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="space-y-4">
-            <Link href="/" className="flex items-center gap-2">
-              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-orange-500">
-                <Car className="h-5 w-5 text-white" />
-              </div>
-              <div className="leading-none">
-                <p className="font-bold text-white text-lg">Ouirani</p>
-                <p className="text-orange-400 text-xs font-medium tracking-widest uppercase">Cars</p>
-              </div>
+            <Link href="/">
+              <Image src="/logo.png" alt="Ouirani Cars" width={140} height={56} className="h-12 w-auto object-contain" />
             </Link>
             <p className="text-sm leading-relaxed">
-              La référence de la location de voitures à Agadir et dans tout le Maroc.
-              Service premium, tarifs transparents, disponible 24h/24.
+              La référence de la location de voitures à Agadir. Service premium, tarifs transparents en euros, disponible 24h/24.
             </p>
             <div className="flex gap-3">
               <a
-                href="#"
-                className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/5 hover:bg-orange-500 transition-colors"
-              >
-                <Share2 className="h-4 w-4" />
-              </a>
-              <a
-                href="#"
-                className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/5 hover:bg-orange-500 transition-colors"
+                href={WHATSAPP}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 bg-green-600/20 border border-green-600/40 hover:bg-green-600 text-green-400 hover:text-white px-3 py-2 rounded-lg text-sm font-medium transition-colors"
               >
                 <MessageCircle className="h-4 w-4" />
+                WhatsApp
               </a>
             </div>
           </div>
@@ -63,18 +57,18 @@ export default function Footer() {
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-3">
                 <MapPin className="h-4 w-4 text-orange-400 mt-0.5 shrink-0" />
-                <span>Boulevard Mohammed V, Agadir 80000, Maroc</span>
+                <span>Ouirani Cars, Faabi, Rue 115 Dakhla, Agadir 80000, Maroc</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="h-4 w-4 text-orange-400 shrink-0" />
-                <a href="tel:+212600000000" className="hover:text-orange-400 transition-colors">
-                  +212 6 00 00 00 00
+                <a href={`tel:${PHONE}`} className="hover:text-orange-400 transition-colors">
+                  {PHONE}
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="h-4 w-4 text-orange-400 shrink-0" />
-                <a href="mailto:contact@ouranicars.ma" className="hover:text-orange-400 transition-colors">
-                  contact@ouranicars.ma
+                <a href="mailto:ouiranicars@gmail.com" className="hover:text-orange-400 transition-colors">
+                  ouiranicars@gmail.com
                 </a>
               </li>
             </ul>
@@ -95,7 +89,7 @@ export default function Footer() {
               </li>
               <li className="pl-6">09h00 – 18h00</li>
               <li className="mt-3 text-orange-400 font-medium">
-                Assistance 24h/24 par téléphone
+                Assistance 24h/24 par WhatsApp
               </li>
             </ul>
           </div>
@@ -104,15 +98,8 @@ export default function Footer() {
         <Separator className="my-8 bg-white/10" />
 
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
-          <p>© 2024 Ouirani Cars – Agadir, Maroc. Tous droits réservés.</p>
-          <div className="flex gap-4">
-            <Link href="#" className="hover:text-orange-400 transition-colors">
-              Mentions légales
-            </Link>
-            <Link href="#" className="hover:text-orange-400 transition-colors">
-              CGV
-            </Link>
-          </div>
+          <p>© 2024 Ouirani Cars — Agadir, Maroc. Tous droits réservés.</p>
+          <p className="text-gray-600">ouiranicars@gmail.com</p>
         </div>
       </div>
     </footer>

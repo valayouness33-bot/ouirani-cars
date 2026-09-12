@@ -50,14 +50,14 @@ export default function ContactPage() {
                   {
                     icon: Phone,
                     title: "Téléphone / WhatsApp",
-                    lines: ["+212 6 00 00 00 00"],
+                    lines: ["+212613612850"],
                     link: "tel:+212600000000",
                   },
                   {
                     icon: Mail,
                     title: "Email",
-                    lines: ["contact@ouranicars.ma"],
-                    link: "mailto:contact@ouranicars.ma",
+                    lines: ["ouiranicars@gmail.com"],
+                    link: "mailto:ouiranicars@gmail.com",
                   },
                   {
                     icon: Clock,
@@ -98,9 +98,9 @@ export default function ContactPage() {
             <div className="bg-gray-900 border border-white/5 rounded-2xl overflow-hidden h-56 flex items-center justify-center">
               <div className="text-center">
                 <MapPin className="h-8 w-8 text-orange-400 mx-auto mb-2" />
-                <p className="text-gray-400 text-sm">Boulevard Mohammed V, Agadir</p>
+                <p className="text-gray-400 text-sm">Rue 115 Dakhla, Agadir</p>
                 <a
-                  href="https://maps.google.com/?q=Agadir+Boulevard+Mohammed+V"
+                  href="https://maps.google.com/?q=Ouirani+Cars+Agadir+Rue+115+Dakhla"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-orange-400 text-sm hover:text-orange-300 mt-1 inline-block"

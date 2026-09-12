@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     template: "%s | Ouirani Cars Agadir",
   },
   description:
-    "Location de voitures à Agadir dès 200 MAD/jour. Dacia Logan, Sandero, Clio 5, Duster, Tucson, Touareg. Kilométrage illimité, assurance incluse, livraison hôtel. Réservation rapide 24h/24.",
+    "Location de voitures à Agadir dès 29€/jour. Dacia Logan, Sandero, Clio 5, Duster, Tucson, Touareg. Kilométrage illimité, assurance incluse, livraison hôtel. Réservation rapide 24h/24.",
   keywords: [
     "location voiture Agadir",
     "location voiture Maroc",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     siteName: "Ouirani Cars",
     title: "Ouirani Cars — Location de Voitures à Agadir",
     description:
-      "Location de voitures à Agadir dès 200 MAD/jour. Kilométrage illimité, assurance incluse, livraison hôtel. Réservation 24h/24.",
+      "Location de voitures à Agadir dès 29€/jour. Kilométrage illimité, assurance incluse, livraison hôtel. Réservation 24h/24.",
     images: [
       {
         url: "/og-image.jpg",
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Ouirani Cars — Location de Voitures à Agadir",
-    description: "Location de voitures à Agadir dès 200 MAD/jour. Kilométrage illimité, assurance incluse.",
+    description: "Location de voitures à Agadir dès 29€/jour. Kilométrage illimité, assurance incluse.",
     images: ["/og-image.jpg"],
   },
   alternates: {
@@ -95,11 +95,11 @@ export default function RootLayout({
         logo: `${siteUrl}/logo.png`,
         image: `${siteUrl}/og-image.jpg`,
         description: "Location de voitures à Agadir, Maroc. Dacia Logan, Sandero, Clio 5, Duster, Tucson, VW Touareg.",
-        telephone: "+212600000000",
-        email: "contact@ouiranicars.com",
+        telephone: "+212613612850",
+        email: "ouiranicars@gmail.com",
         address: {
           "@type": "PostalAddress",
-          streetAddress: "Boulevard Mohammed V",
+          streetAddress: "Faabi, Rue 115 Dakhla",
           addressLocality: "Agadir",
           postalCode: "80000",
           addressCountry: "MA",
@@ -123,7 +123,7 @@ export default function RootLayout({
             closes: "18:00",
           },
         ],
-        priceRange: "200-1200 MAD/jour",
+        priceRange: "29-110 €/jour",
         aggregateRating: {
           "@type": "AggregateRating",
           ratingValue: "4.9",

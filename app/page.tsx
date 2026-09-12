@@ -10,7 +10,7 @@ import CtaBanner from "@/components/home/CtaBanner";
 export const metadata: Metadata = {
   title: "Ouirani Cars — Location de Voitures à Agadir | Dès 200 MAD/Jour",
   description:
-    "Louez votre voiture à Agadir avec Ouirani Cars. Dacia Logan, Sandero, Clio 5, Duster, Tucson, VW Touareg. Kilométrage illimité, assurance incluse, livraison à domicile. Réservation rapide 24h/24.",
+    "Louez votre voiture à Agadir avec Ouirani Cars. Dacia Logan, Sandero, Clio 5, Duster, Tucson, VW Touareg. Dès 29€/jour — Kilométrage illimité, assurance incluse, livraison à domicile. ☎ +212613612850",
   alternates: {
     canonical: "https://www.ouiranicars.com",
   },
