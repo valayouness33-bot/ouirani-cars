@@ -4,6 +4,7 @@ import { formatPrice } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Users, Gauge, Fuel, Calendar, CheckCircle2 } from "lucide-react";
+import Image from "next/image";
 
 export default function CarCard({ car }: { car: Car }) {
   return (
