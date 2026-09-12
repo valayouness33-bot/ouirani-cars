@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     "Contactez Ouirani Cars à Agadir. Téléphone, WhatsApp, email et adresse. Notre équipe vous répond rapidement pour votre location de voiture.",
   alternates: {
-    canonical: "https://www.ouiranicars.com/contact",
+    canonical: "https://www.ouiranicras.com/contact",
   },
 };
 

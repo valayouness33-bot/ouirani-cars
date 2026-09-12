@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/", "/_next/"],
       },
     ],
-    sitemap: "https://www.ouiranicars.com/sitemap.xml",
-    host: "https://www.ouiranicars.com",
+    sitemap: "https://www.ouiranicras.com/sitemap.xml",
+    host: "https://www.ouiranicras.com",
   };
 }

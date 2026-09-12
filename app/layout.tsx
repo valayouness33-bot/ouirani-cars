@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const siteUrl = "https://www.ouiranicars.com";
+const siteUrl = "https://www.ouiranicras.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

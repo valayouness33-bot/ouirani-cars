@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     "Consultez notre flotte : Dacia Logan (200 MAD/j), Dacia Sandero, Clio 5, Clio 5 Automatique, Dacia Duster 4x4, Hyundai Tucson, VW Touareg. Kilométrage illimité, assurance incluse à Agadir.",
   alternates: {
-    canonical: "https://www.ouiranicars.com/voitures",
+    canonical: "https://www.ouiranicras.com/voitures",
   },
 };
 

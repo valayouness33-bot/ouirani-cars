@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description:
     "Louez votre voiture à Agadir avec Ouirani Cars. Dacia Logan, Sandero, Clio 5, Duster, Tucson, VW Touareg. Dès 29€/jour — Kilométrage illimité, assurance incluse, livraison à domicile. ☎ +212613612850",
   alternates: {
-    canonical: "https://www.ouiranicars.com",
+    canonical: "https://www.ouiranicras.com",
   },
 };
 

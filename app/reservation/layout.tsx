@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     "Réservez votre voiture à Agadir en ligne. Choisissez votre véhicule, vos dates et votre lieu de prise en charge. Confirmation immédiate, aucun paiement à l'avance.",
   alternates: {
-    canonical: "https://www.ouiranicars.com/reservation",
+    canonical: "https://www.ouiranicras.com/reservation",
   },
 };
 
