@@ -3,6 +3,7 @@ import { cars } from "@/lib/cars";
 import { formatPrice } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Users, Gauge, Fuel, CheckCircle2 } from "lucide-react";
+import Image from "next/image";
 
 export default function FeaturedCars() {
   return (
@@ -42,12 +43,14 @@ export default function FeaturedCars() {
             >
               <div className="flex flex-col md:flex-row">
                 {/* Image */}
-                <div className="relative md:w-72 lg:w-80 h-48 md:h-auto shrink-0 overflow-hidden bg-white">
-                  <img
+                <div className="relative md:w-72 lg:w-80 h-48 md:h-auto shrink-0 overflow-hidden bg-white min-h-[180px]">
+                  <Image
                     src={car.image}
                     alt={`${car.name} - Location voiture Agadir`}
-                    className="w-full h-full object-contain p-6 group-hover:scale-105 transition-transform duration-700"
-                    loading="lazy"
+                    fill
+                    className="object-contain p-6 group-hover:scale-105 transition-transform duration-700"
+                    sizes="(max-width: 768px) 100vw, 320px"
+                    loading={car.id <= 2 ? "eager" : "lazy"}
                   />
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent to-white/10 md:bg-none" />
 

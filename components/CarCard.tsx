@@ -11,10 +11,12 @@ export default function CarCard({ car }: { car: Car }) {
     <div className="group relative bg-gray-900 border border-white/5 rounded-2xl overflow-hidden hover:border-amber-500/40 hover:shadow-[0_0_40px_-10px_rgba(249,115,22,0.2)] transition-all duration-300 flex flex-col">
       {/* Image */}
       <div className="relative h-52 overflow-hidden bg-white shrink-0">
-        <img
+        <Image
           src={car.image}
           alt={`${car.name} - Location voiture Agadir`}
-          className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-700"
+          fill
+          className="object-contain p-4 group-hover:scale-105 transition-transform duration-700"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           loading="lazy"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent" />
