@@ -102,7 +102,7 @@ function ReservationForm() {
           <Car className="h-5 w-5 text-orange-400" />
           <h2 className="text-white font-semibold text-lg">Choisir un véhicule</h2>
         </div>
-        <Select value={selectedCarId} onValueChange={setSelectedCarId} required>
+        <Select value={selectedCarId} onValueChange={(v) => setSelectedCarId(v ?? "")}>
           <SelectTrigger className="bg-gray-700 border-white/10 text-white">
             <SelectValue placeholder="Sélectionner une voiture..." />
           </SelectTrigger>
@@ -166,7 +166,7 @@ function ReservationForm() {
 
         <div>
           <label className="text-gray-400 text-sm mb-1.5 block">Lieu de prise en charge *</label>
-          <Select value={pickupLocation} onValueChange={setPickupLocation}>
+          <Select value={pickupLocation} onValueChange={(v) => setPickupLocation(v ?? "agence")}>
             <SelectTrigger className="bg-gray-700 border-white/10 text-white">
               <SelectValue />
             </SelectTrigger>

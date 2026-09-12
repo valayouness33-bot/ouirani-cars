@@ -72,7 +72,7 @@ export default function VoituresPage() {
                 className="pl-9 bg-gray-800 border-white/10 text-white placeholder:text-gray-600 focus-visible:ring-orange-500/50"
               />
             </div>
-            <Select value={category} onValueChange={setCategory}>
+            <Select value={category} onValueChange={(v) => setCategory(v ?? "Tous")}>
               <SelectTrigger className="bg-gray-800 border-white/10 text-white">
                 <SelectValue />
               </SelectTrigger>
@@ -84,7 +84,7 @@ export default function VoituresPage() {
                 ))}
               </SelectContent>
             </Select>
-            <Select value={transmission} onValueChange={setTransmission}>
+            <Select value={transmission} onValueChange={(v) => setTransmission(v ?? "Tous")}>
               <SelectTrigger className="bg-gray-800 border-white/10 text-white">
                 <SelectValue />
               </SelectTrigger>
@@ -96,7 +96,7 @@ export default function VoituresPage() {
                 ))}
               </SelectContent>
             </Select>
-            <Select value={sort} onValueChange={setSort}>
+            <Select value={sort} onValueChange={(v) => setSort(v ?? "default")}>
               <SelectTrigger className="bg-gray-800 border-white/10 text-white">
                 <SelectValue />
               </SelectTrigger>
