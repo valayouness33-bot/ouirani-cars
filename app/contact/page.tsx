@@ -94,21 +94,28 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Map placeholder */}
-            <div className="bg-gray-900 border border-white/5 rounded-2xl overflow-hidden h-56 flex items-center justify-center">
-              <div className="text-center">
-                <MapPin className="h-8 w-8 text-amber-400 mx-auto mb-2" />
-                <p className="text-gray-400 text-sm">Rue 115 Dakhla, Agadir</p>
-                <a
-                  href="https://maps.google.com/?q=Ouirani+Cars+Agadir+Rue+115+Dakhla"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-amber-400 text-sm hover:text-amber-300 mt-1 inline-block"
-                >
-                  Voir sur Google Maps →
-                </a>
-              </div>
+            {/* Google Maps */}
+            <div className="rounded-2xl overflow-hidden h-56 border border-white/5">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.789!2d-9.5981!3d30.4278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDI1JzQwLjEiTiA5wrAzNSc1My4yIlc!5e0!3m2!1sfr!2sma!4v1234567890"
+                width="100%"
+                height="100%"
+                style={{ border: 0, filter: "grayscale(20%) invert(5%)" }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Ouirani Cars - Agadir"
+              />
             </div>
+            <a
+              href="https://maps.google.com/?q=Ouirani+Cars+Faabi+Rue+115+Dakhla+Agadir"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 w-full bg-amber-500/10 border border-amber-500/30 hover:bg-amber-500/20 text-amber-400 font-medium py-3 rounded-xl transition-colors text-sm"
+            >
+              <MapPin className="h-4 w-4" />
+              Ouvrir dans Google Maps
+            </a>
           </div>
 
           {/* Form */}

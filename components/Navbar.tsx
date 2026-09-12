@@ -27,11 +27,11 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b border-amber-500/20 bg-black/95 backdrop-blur supports-[backdrop-filter]:bg-black/90">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3">
-          <Image src="/logo-gold.jpg" alt="Ouirani Cars" width={56} height={56} className="h-11 w-11 rounded-full object-cover" priority />
-          <div className="hidden sm:block leading-none">
-            <p className="text-white font-black text-lg">Ouirani</p>
-            <p className="text-amber-400 text-xs font-bold tracking-widest uppercase">Cars</p>
+        <Link href="/" className="flex items-center gap-2.5">
+          <Image src="/logo-gold.jpg" alt="Ouirani Cars" width={56} height={56} className="h-10 w-10 rounded-full object-cover shrink-0" priority />
+          <div className="leading-none">
+            <p className="text-white font-black text-base">Ouirani</p>
+            <p className="text-amber-400 text-[10px] font-bold tracking-widest uppercase">Cars</p>
           </div>
         </Link>
 
