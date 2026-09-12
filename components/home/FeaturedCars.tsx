@@ -42,14 +42,14 @@ export default function FeaturedCars() {
             >
               <div className="flex flex-col md:flex-row">
                 {/* Image */}
-                <div className="relative md:w-72 lg:w-96 h-52 md:h-auto shrink-0 overflow-hidden">
+                <div className="relative md:w-72 lg:w-80 h-48 md:h-auto shrink-0 overflow-hidden bg-white">
                   <img
                     src={car.image}
                     alt={`${car.name} - Location voiture Agadir`}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    className="w-full h-full object-contain p-6 group-hover:scale-105 transition-transform duration-700"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent to-gray-900/20 md:bg-gradient-to-r md:from-transparent md:to-gray-900" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent to-white/10 md:bg-none" />
 
                   {/* Badges */}
                   <div className="absolute top-3 left-3 flex gap-2">
